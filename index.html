@@ -6,38 +6,56 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Expenses chart component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  My balance
-  $921.48
+  <main>
+    <div class="balance">
 
-  Spending - Last 7 days
+      <div class="balance-total">
+        <p>My balance</p>
+        <p class="balance-amount">$921.48</p>
+      </div>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+      <img src="./images/logo.svg" alt="logo">
+    </div>
 
-  Total this month
-  $478.33
+    <div class="spending">
+      <h2>Spending - Last 7 days</h2>
 
-  +2.4%
-  from last month
+      <div class="chart-container">
+        <canvas id="barChart"></canvas>
+      </div>
+
+      <hr>
+
+      <div class="month-info">
+        
+        <div class="spending-total">
+          <p class="text">Total this month</p>
+          <p class="spending-amount">$478.33</p>
+        </div>
+
+        <div class="spending-increase">
+          <p>+2.4%</p>
+          <p class="text">from last month</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Phuong-Anh Nguyen</a>.
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+
 </body>
 </html>
